@@ -461,7 +461,7 @@ spec:
               fieldPath: metadata.namespace
         - name: LD_PRELOAD
           value: /usr/local/lib/libmimalloc.so
-        image: ysicing/ngress-nginx-controller:v1.1.2
+        image: ysicing/ingress-nginx-controller:v1.1.2
         imagePullPolicy: IfNotPresent
         lifecycle:
           preStop:
