@@ -16,7 +16,7 @@ jobs:
       - name: install kind
         uses: helm/kind-action@v1.2.0
         with:
-          config: kind.yaml
+          config: config.yaml
       - name: install helm
         uses: azure/setup-helm@v3
       - name: Test
