@@ -4,7 +4,7 @@ networking:
   serviceSubnet: "10.96.0.0/16"
   podSubnet: "10.97.0.0/16"
   kubeProxyMode: "ipvs"
-  ipFamily: dual
+  # ipFamily: dual
   apiServerAddress: "127.0.0.1"
   apiServerPort: 6443
 featureGates:

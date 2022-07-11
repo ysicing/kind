@@ -17,6 +17,7 @@ jobs:
         uses: helm/kind-action@v1.2.0
         with:
           config: config.yaml
+          version: 
       - name: install helm
         uses: azure/setup-helm@v3
       - name: Test
