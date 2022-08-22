@@ -1,0 +1,29 @@
+name: install
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '**.yaml'
+      - '**.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: install kind
+        uses: helm/kind-action@v1.3.0
+        with:
+          config: config.yaml
+          version: 
+      - name: install helm
+        uses: azure/setup-helm@v3
+      - name: Test
+        run: |
+          kubectl get nodes
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm install my-release bitnami/nginx
+          sleep 60
+          kubectl get pods 
