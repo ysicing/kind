@@ -23,10 +23,12 @@ jobs:
           kubectl get storageclass standard
       - name: install helm
         uses: azure/setup-helm@v3
+        with:
+          version: 'v3.10.3'
       - name: Test2
         run: |
-          kubectl get nodes
-          helm repo add bitnami https://charts.bitnami.com/bitnami
-          helm install my-release bitnami/nginx
           sleep 60
-          kubectl get pods
+          kubectl get nodes -o wide
+          helm repo add bitnami https://charts.bitnami.com/bitnami
+          helm upgrade -i nginx bitnami/nginx
+          kubectl get pods -A -o wide
