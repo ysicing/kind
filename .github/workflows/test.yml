@@ -14,16 +14,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: install kind
-        uses: helm/kind-action@v1.3.0
+        uses: helm/kind-action@v1.4.0
         with:
           config: config.yaml
-          version: 
+      - name: Test1
+        run: |
+          kubectl cluster-info
+          kubectl get storageclass standard
       - name: install helm
         uses: azure/setup-helm@v3
-      - name: Test
+      - name: Test2
         run: |
           kubectl get nodes
           helm repo add bitnami https://charts.bitnami.com/bitnami
           helm install my-release bitnami/nginx
           sleep 60
-          kubectl get pods 
+          kubectl get pods
