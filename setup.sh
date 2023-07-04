@@ -28,4 +28,4 @@ kind create cluster --image ccr.ccs.tencentyun.com/k7scn/node:v1.27.3 --kubeconf
 
 kubectl cluster-info --context kind-kind --kubeconfig ./kind.kubeconfig
 
-kubectl get nodes
+kubectl get nodes --kubeconfig ./kind.kubeconfig
