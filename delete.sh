@@ -1,1 +1,3 @@
- kind delete cluster
+#!/bin/bash
+
+kind delete cluster

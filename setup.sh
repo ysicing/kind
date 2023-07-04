@@ -12,7 +12,6 @@ else
   mv kind-linux-amd64 /usr/local/bin/kind
 fi
 
-
 docker pull ccr.ccs.tencentyun.com/k7scn/node:v1.27.3
 
 kind create cluster --image ccr.ccs.tencentyun.com/k7scn/node:v1.27.3 --kubeconfig ./kind.kubeconfig --config ./config.yaml
