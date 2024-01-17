@@ -7,7 +7,7 @@ command_exists() {
 if command_exists kind; then
   echo "kind exists"
 else
-  wget https://ghproxy.com/https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-amd64
+  wget https://gh.dev.438250.xyz/https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-amd64
   chmod +x kind-linux-amd64
   mv kind-linux-amd64 /usr/local/bin/kind
 fi
