@@ -7,7 +7,7 @@ command_exists() {
 if command_exists kind; then
   echo "kind exists"
 else
-  wget https://gh.dev.438250.xyz/https://github.com/kubernetes-sigs/kind/releases/download/v0.20.0/kind-linux-amd64
+  wget https://dfcos.ysicing.net/oss/tiga/linux/amd64/kubectl/kind
   chmod +x kind-linux-amd64
   mv kind-linux-amd64 /usr/local/bin/kind
 fi
@@ -15,7 +15,7 @@ fi
 if command_exists kubectl; then
   echo "kubectl exists"
 else
-  wget https://pkg-1308438674.cos.ap-shanghai.myqcloud.com/qucheng/cli/stable/tools/kubectl
+  wget https://dfcos.ysicing.net/oss/tiga/linux/amd64/kubectl
   chmod +x kubectl
   mv kubectl /usr/local/bin/kubectl
 fi
