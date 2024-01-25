@@ -7,7 +7,7 @@ command_exists() {
 if command_exists kind; then
   echo "kind exists"
 else
-  wget https://dfcos.ysicing.net/oss/tiga/linux/amd64/kubectl/kind
+  wget https://dfcos.ysicing.net/oss/tiga/linux/amd64/kind
   chmod +x kind-linux-amd64
   mv kind-linux-amd64 /usr/local/bin/kind
 fi
