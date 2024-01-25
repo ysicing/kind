@@ -8,8 +8,8 @@ if command_exists kind; then
   echo "kind exists"
 else
   wget https://dfcos.ysicing.net/oss/tiga/linux/amd64/kind
-  chmod +x kind-linux-amd64
-  mv kind-linux-amd64 /usr/local/bin/kind
+  chmod +x kind
+  mv kind /usr/local/bin/kind
 fi
 
 if command_exists kubectl; then
